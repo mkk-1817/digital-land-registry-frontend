@@ -1,11 +1,17 @@
+<nav class="navbar">
+  <img src="assets/logo.jpg" class="logo">
+  <span class="head-text">DIGITAL LAND REGISTRY</span>
+</nav>
 <div class="register-container">
-    <h2>Sign Up</h2>
-    <form (submit)="register(); $event.preventDefault()">
-      <input type="text" placeholder="Username" [(ngModel)]="username" required>
-      <input type="password" placeholder="Password" [(ngModel)]="password" required>
-      <button type="submit">Register</button>
-    </form>
-    <p *ngIf="message">{{ message }}</p>
-    <p>Already have an account? <a routerLink="/login">Login</a></p>
-  </div>
-  
+  <h2>Sign Up</h2>
+  <form (submit)="register(); $event.preventDefault()" style="max-width: 350px; margin: 50px auto;">
+    <input type="text" placeholder="First Name" [(ngModel)]="fname" name="fname" required>
+    <input type="text" placeholder="Last Name" [(ngModel)]="lname" name="lname" required>
+    <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required>
+    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+    <input type="password" placeholder="Confirm Password" [(ngModel)]="cpassword" name="cpassword" required>
+    <button type="submit">Register</button>
+  </form>
+  <p *ngIf="message">{{ message }}</p>
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</div>

@@ -4,24 +4,30 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
-import { HttpClientModule } from '@angular/common/http'; 
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ApiService } from './services/api.service';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     RouterModule.forRoot(routes) ,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
