@@ -21,7 +21,11 @@ export class LoginComponent {
       response => {
         localStorage.setItem('token', response.access_token); 
         this.message = "Login successful!";
-        this.router.navigate(['/user-home']);
+        if(response.role=='user'){
+          this.router.navigate(["/user-home"])
+        }else{
+          this.router.navigate(["/admin"])
+        }
       },
       error => {
         this.message = 'Invalid credentials.';
