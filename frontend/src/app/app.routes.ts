@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { AdminComponent } from './admin/admin.component';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },  
