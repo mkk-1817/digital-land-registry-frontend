@@ -1,0 +1,19 @@
+<form (submit)="submitProperty()">
+    <label>Property Type:</label>
+    <input type="text" [(ngModel)]="property.property_type" required />
+  
+    <label>Survey Number:</label>
+    <input type="text" [(ngModel)]="property.survey_number" required />
+  
+    <label>Plot Number:</label>
+    <input type="text" [(ngModel)]="property.plot_number" required />
+  
+    <label>Area:</label>
+    <input type="text" [(ngModel)]="property.area" required />
+  
+    <label>Property Tax Receipt (PDF):</label>
+    <input type="file" (change)="onFileSelected($event)" accept="application/pdf" />
+  
+    <button type="submit">Add Property</button>
+  </form>
+  

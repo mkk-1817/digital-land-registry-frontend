@@ -12,6 +12,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ApiService } from './services/api.service';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddPropertyComponent } from './add-property/add-property.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     SignupComponent,
     UserHomeComponent,
-    AdminComponent
+    AdminComponent,
+    AddPropertyComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
